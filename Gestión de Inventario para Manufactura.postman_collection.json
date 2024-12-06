@@ -1,0 +1,936 @@
+{
+	"info": {
+		"_postman_id": "37f7b100-81fe-4933-96da-4a662e5cfa35",
+		"name": "Gestión de Inventario para Manufactura",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26018885"
+	},
+	"item": [
+		{
+			"name": "Error Handling",
+			"item": [
+				{
+					"name": "Get Not Found",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/errores/notfound",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"errores",
+								"notfound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Server Error",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/errores/servererror",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"errores",
+								"servererror"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get 400 error",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/errores/badrequest",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"errores",
+								"badrequest"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Respuesta en caso de error. De forma que las respuesta de errores son consistentes y desde el cliente que puedan manejar facilmente."
+		},
+		{
+			"name": "Estados",
+			"item": [
+				{
+					"name": "Get Estados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/estados",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"estados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Estado por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/estados/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"estados",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Estado",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Nuevo estado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/estados",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"estados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar/Crear Estado",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Nuevo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/estados/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"estados",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar estado",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Nuevo estado2 \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/estados/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"estados",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EntradaMercancia",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/EntradaMercancia",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"EntradaMercancia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get entrada por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/EntradaMercancia/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"EntradaMercancia",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ProductoId\": 3,\r\n  \"FechaReportado\": \"2024-12-04\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/EntradaMercancia",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"EntradaMercancia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar/Crear",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ProductoId\": 2,\r\n  \"FechaEntrada\": \"2024-12-04\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/EntradaMercancia/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"EntradaMercancia",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar entrada",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Nuevo estado2 \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/EntradaMercancia/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"EntradaMercancia",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Salidad Mercancia",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/SalidaMercancia",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"SalidaMercancia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get salida por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/EntradaMercancia/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"EntradaMercancia",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ProductoId\": 2,\r\n  \"FechaDeSalida\": \"2024-12-04\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/SalidaMercancia",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"SalidaMercancia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar/Crear",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ProductoId\": 3,\r\n  \"FechaDeSalida\": \"2024-12-04\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/SalidaMercancia/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"SalidaMercancia",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar salida",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Nuevo estado2 \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/SalidaMercancia/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"SalidaMercancia",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Productos defectuosos",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/ProductosDefectuosos",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"ProductosDefectuosos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/ProductosDefectuosos/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"ProductosDefectuosos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ProductoId\": 3,\r\n  \"FechaReportado\": \"2024-12-04\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/ProductosDefectuosos",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"ProductosDefectuosos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar/Crear",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ProductoId\": 2,\r\n  \"FechaReportado\": \"2024-12-04\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/ProductosDefectuosos/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"ProductosDefectuosos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar estado",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Nuevo estado2 \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/ProductosDefectuosos/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"ProductosDefectuosos",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tipos de Elaboracion",
+			"item": [
+				{
+					"name": "Get Tipos de Elaboracion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/tiposdeelaboracion",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"tiposdeelaboracion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get tipo de elaboracion por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/tiposdeelaboracion/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"tiposdeelaboracion",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear tipo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tipo\": \"Nuevo estado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/tiposdeelaboracion",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"tiposdeelaboracion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar/Crear tipo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tipo\": \"maquinaaaas \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/tiposdeelaboracion/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"tiposdeelaboracion",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar tipo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Nuevo estado2 \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/tiposdeelaboracion/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"tiposdeelaboracion",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "Get Productos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJBMTI4Q0JDLUhTMjU2IiwidHlwIjoiSldUIn0.eyJlbWFpbCI6ImFuZHJlcy5yb2RyaWd1ZXpAdGVzdC5jb20iLCJnaXZlbl9uYW1lIjoiQW5kcmVzIFJvZHJpZ3VleiIsIm5iZiI6MTczMzQ0MTgxMywiZXhwIjoxNzMzNTI4MjEzLCJpYXQiOjE3MzM0NDE4MTMsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAwMCJ9.n98uAVpB7AexxyAlKX0r-lM2D2ljUEx33GDs7B63oZY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/productos",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"productos"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer a very long key of at least 32 characters.....",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Producto por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/productos/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"productos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Estados de Producto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/productos/estados",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"productos",
+								"estados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tipos de elaboracion de Productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/productos/tipos_de_elaboracion",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"productos",
+								"tipos_de_elaboracion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"Nombre\": \"test\",\r\n  \"TipoDeElaboracionId\": 1,\r\n  \"EstadoId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/productos",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Multiples",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"Nombre\": \"Producto 1\",\r\n    \"TipoDeElaboracionId\": 1,\r\n    \"EstadoId\": 2\r\n  },\r\n  {\r\n    \"Nombre\": \"Producto 2\",\r\n    \"TipoDeElaboracionId\": 2,\r\n    \"EstadoId\": 1\r\n  },\r\n  {\r\n    \"Nombre\": \"Producto 3\",\r\n    \"TipoDeElaboracionId\": 1,\r\n    \"EstadoId\": 2\r\n  }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/productos/crear-multiples",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"productos",
+								"crear-multiples"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar producto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Nuevo estado2 \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/tiposdeelaboracion/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"tiposdeelaboracion",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuentas",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"andres.rodriguez@test.com\",\r\n  \"Contrasena\": \"Pa$$w0rd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/cuenta/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"cuenta",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:5000",
+			"type": "string"
+		}
+	]
+}
