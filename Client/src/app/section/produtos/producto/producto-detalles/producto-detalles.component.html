@@ -1,0 +1,19 @@
+<div *ngIf="producto">
+  <h2>Detalles del producto</h2>
+
+  <div class="card" style="width: 18rem">
+    <div class="card-body">
+      <h5 class="card-title">
+        <span class="fw-light">Id: {{ producto.id }}</span>
+        {{ producto.nombre }}
+      </h5>
+      <div class="card-text">
+        <span class="badge text-bg-primary">{{ producto.estado }}</span>
+        <div>Tipo de elaboracion: {{ producto.tipoDeElaboracion }}</div>
+      </div>
+      <button class="btn btn-danger" (click)="borrarProducto(producto.id)">
+        Borrar
+      </button>
+    </div>
+  </div>
+</div>

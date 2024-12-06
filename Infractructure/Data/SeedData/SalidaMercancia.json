@@ -1,0 +1,26 @@
+[
+  {
+    "ProductoId": 1,
+    "FechaDeSalida": "2024-12-05"
+  },
+  {
+    "ProductoId": 2,
+    "FechaDeSalida": "2024-12-06"
+  },
+  {
+    "ProductoId": 3,
+    "FechaDeSalida": "2024-12-07"
+  },
+  {
+    "ProductoId": 4,
+    "FechaDeSalida": "2024-12-08"
+  },
+  {
+    "ProductoId": 5,
+    "FechaDeSalida": "2024-12-09"
+  },
+  {
+    "ProductoId": 6,
+    "FechaDeSalida": "2024-12-10"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "Nombre": "Camiseta",
+    "TipoDeElaboracionId": 1,
+    "EstadoId": 1
+  },
+  {
+    "Nombre": "Zapatos deportivos",
+    "TipoDeElaboracionId": 2,
+    "EstadoId": 2
+  },
+  {
+    "Nombre": "Bolso de cuero",
+    "TipoDeElaboracionId": 2,
+    "EstadoId": 1
+  },
+  {
+    "Nombre": "Mochila",
+    "TipoDeElaboracionId": 1,
+    "EstadoId": 2
+  },
+  {
+    "Nombre": "Cinturon de cuero",
+    "TipoDeElaboracionId": 1,
+    "EstadoId": 2
+  },
+  {
+    "Nombre": "Chaqueta",
+    "TipoDeElaboracionId": 2,
+    "EstadoId": 1
+  }
+]

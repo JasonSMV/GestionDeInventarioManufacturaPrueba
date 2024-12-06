@@ -1,0 +1,51 @@
+<div class="container">
+  <header
+    class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
+  >
+    <div class="col-md-3 mb-2 mb-md-0">
+      <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+        <img src="/assets/favicon.png" />
+      </a>
+    </div>
+
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <li>
+        <a
+          href="#"
+          class="nav-link px-2"
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Inicio</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          class="nav-link px-2"
+          routerLink="/productos"
+          routerLinkActive="active"
+          >Productos</a
+        >
+      </li>
+      <!-- <li><a href="#" class="nav-link px-2">Productos Defectuosos</a></li>
+      <li><a href="#" class="nav-link px-2">Salida Mercancia</a></li>
+      <li><a href="#" class="nav-link px-2">Entrada Mercancia</a></li> -->
+    </ul>
+
+    <ng-container *ngIf="(usuarioActual$ | async) == null">
+      <div class="col-md-3 text-end">
+        <button
+          type="button"
+          class="btn btn-outline-primary me-2"
+          routerLink="/cuenta/login"
+        >
+          Iniciar session.
+        </button>
+      </div></ng-container
+    >
+    <ng-container *ngIf="usuarioActual$ | async">
+      <span> Bienvenido </span>
+    </ng-container>
+  </header>
+</div>

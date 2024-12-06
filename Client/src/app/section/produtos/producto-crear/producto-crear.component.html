@@ -1,0 +1,28 @@
+<form [formGroup]="productoForm" (ngSubmit)="onSubmit()">
+  <div class="mb-3 row">
+    <label class="col-sm-2 col-form-label">Nombre</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" formControlName="Nombre" />
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label class="col-sm-2 col-form-label">Tipo de Elaboracion Id</label>
+    <div class="col-sm-10">
+      <input
+        type="text"
+        class="form-control"
+        formControlName="TipoDeElaboracionId"
+      />
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label class="col-sm-2 col-form-label">Estado Id</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" formControlName="EstadoId" />
+    </div>
+  </div>
+
+  <div>
+    <button class="btn btn-primary" type="submit">Crear</button>
+  </div>
+</form>
